@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9d8db38-1eab-44ab-8d31-8b36a66c1677" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java" afterPath="$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java" afterPath="$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java" afterPath="$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java" />
     </list>
     <ignored path="TopCoder.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -13,7 +10,7 @@
     <file path="/Lottery.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359976973832" ignored="false" />
     <file path="/Main.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359983981500" ignored="false" />
     <file path="/fragment.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359976202136" ignored="false" />
-    <file path="/PenLift.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359983926035" ignored="false" />
+    <file path="/PenLift.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359984812903" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,37 +69,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Lottery.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java">
+      <file leaf-file-name="PenLift.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="52" selection-start="2800" selection-end="2800" vertical-scroll-proportion="0.0">
+            <state line="41" column="33" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.634106">
               <folding>
-                <element signature="e#2861#2881#0" expanded="true" />
-                <element signature="e#3141#3173#0" expanded="true" />
-                <element signature="e#3851#4235#0" expanded="true" />
-                <element signature="e#4224#4225#0" expanded="true" />
-                <element signature="e#8153#8183#0" expanded="true" />
-                <element signature="e#8512#8530#0" expanded="true" />
-                <element signature="e#9059#9089#0" expanded="true" />
-                <element signature="e#9427#9445#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1198#1211#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PenLift.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="63" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.9386617">
+            <state line="20" column="42" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,8 +110,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java" />
-        <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java" />
         <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java" />
+        <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java" />
       </list>
     </option>
   </component>
@@ -392,7 +374,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.49832216" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -401,8 +383,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.600639" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.49776286" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6709265" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290735" sideWeight="0.49776286" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -472,7 +454,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="52" selection-start="2800" selection-end="2800" vertical-scroll-proportion="0.0">
+        <state line="84" column="52" selection-start="2800" selection-end="2800" vertical-scroll-proportion="0.7583643">
           <folding>
             <element signature="e#2861#2881#0" expanded="true" />
             <element signature="e#3141#3173#0" expanded="true" />
@@ -486,17 +468,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java">
+    <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="17" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0">
+        <state line="20" column="42" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/PenLift.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="63" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.9386617">
-          <folding />
+        <state line="41" column="33" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.634106">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1198#1211#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
