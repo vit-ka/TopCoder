@@ -12,7 +12,15 @@ public class Main {
                         , "PICK TWO LIMITED: 10 2 T T"
                 })));
 
-        /*System.out.println(Arrays.toString(lottery.sortByOdds(new String[]
+        System.out.println(Arrays.toString(lottery.sortByOdds(new String[]
+                {
+                        "PICK ANY THREE: 12 3 F F"
+                        , "PICK THREE IN ORDER: 12 3 T F"
+                        , "PICK THREE DIFFERENT: 12 3 F T"
+                        , "PICK THREE LIMITED: 12 3 T T"
+                })));
+
+        System.out.println(Arrays.toString(lottery.sortByOdds(new String[]
                 {
                         "INDIGO: 93 8 T F",
                         "ORANGE: 29 8 F T",
@@ -26,7 +34,7 @@ public class Main {
         System.out.println(Arrays.toString(lottery.sortByOdds(new String[]
                 {
 
-                })));*/
+                })));
     }
 
     public static void main(String[] args) {
