@@ -24,8 +24,6 @@ public class Lottery {
             result.sorted = rule.substring(spacePosition + 1, spacePosition + 2).equals("T");
             result.unique = rule.substring(spacePosition + 3, spacePosition + 4).equals("T");
 
-            //System.out.println("Parsed rule: " + result);
-
             return result;
         }
 
@@ -102,7 +100,7 @@ public class Lottery {
             }
 
             System.out.println("Rules " + lotteryDescription + " has been evaluated to " + probabilityF);
-            probabilitiesToWin.add(new Pair(probabilityD, lotteryDescription));
+            probabilitiesToWin.add(new Pair<Long, LotteryDescription>(probabilityD, lotteryDescription));
         }
 
         Collections.sort(probabilitiesToWin, new Comparator<Pair<Long, LotteryDescription>>() {

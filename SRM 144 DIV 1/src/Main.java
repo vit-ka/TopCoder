@@ -37,7 +37,12 @@ public class Main {
                 })));
     }
 
+    public static void runPenLift() {
+        PenLift penLift = new PenLift();
+        System.out.println(penLift.numTimes(new String[]{"-10 0 10 0","0 -10 0 10"}, 1));
+    }
+
     public static void main(String[] args) {
-        runLottery();
+        runPenLift();
     }
 }
