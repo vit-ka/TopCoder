@@ -29,7 +29,6 @@ public class Lottery {
             return result;
         }
 
-        @Override
         public String toString() {
             return "LotteryDescription{" +
                     "name='" + name + '\'' +
@@ -67,7 +66,7 @@ public class Lottery {
         }
 
         Collections.sort(probabilitiesToWin, new Comparator<Pair<Long, LotteryDescription>>() {
-            @Override
+
             public int compare(Pair<Long, LotteryDescription> o1, Pair<Long, LotteryDescription> o2) {
                 int result = (int) Math.signum(o1.first - o2.first);
 
@@ -114,43 +113,38 @@ public class Lottery {
     }
 
     private long getSortedAndUniqueProbability(int choices, int blanks) {
-        long result = 0;
-        for (int j = 0; j < choices - blanks + 1; ++j) {
-            int innerResult = 0;
-
-            for (int i = choices - blanks + 1 - j; i >= 1; --i) {
-                innerResult += i;
-            }
-
-            result += innerResult;
+        long result = 1;
+        for (int i = 0; i < blanks; ++i) {
+            result *= choices - i;
         }
 
-        return result;
+        return result / fact(blanks);
+    }
+
+    private long fact(long choices) {
+        if (choices <= 1)
+            return 1;
+
+        return choices * fact(choices - 1);
     }
 
 
     private long getUniqueProbability(int choices, int blanks) {
         long result = 1;
-        for (int i = 1; i < blanks; ++i) {
-            result *= (choices - i);
-        }
-
-        return result * choices;
-    }
-
-    private long getSortedProbability(int choices, int blanks) {
-        long result = 0;
-        for (int j = 0; j < choices; ++j) {
-
-            long innerResult = 1;
-            for (int i = 0; i < blanks - 1; ++i) {
-                innerResult *= (choices - j);
-            }
-
-            result += innerResult;
+        for (int i = 0; i < blanks; ++i) {
+            result *= choices - i;
         }
 
         return result;
+    }
+
+    private long getSortedProbability(int choices, int blanks) {
+        long result = 1;
+        for (int i = choices; i < choices + blanks; ++i) {
+            result *= i;
+        }
+
+        return result / fact(blanks);
     }
 
     private long getBaseProbability(int choices, int blanks) {

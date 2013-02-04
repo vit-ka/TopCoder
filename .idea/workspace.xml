@@ -5,9 +5,9 @@
     <ignored path="TopCoder.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359958687948" ignored="false" />
-    <file path="/Lottery.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359965807088" ignored="false" />
+    <file path="/Lottery.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359970990125" ignored="false" />
     <file path="/Main.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359958887658" ignored="false" />
-    <file path="/fragment.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359965721756" ignored="false" />
+    <file path="/fragment.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359970800418" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +69,12 @@
       <file leaf-file-name="Lottery.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="56" selection-start="4407" selection-end="4407" vertical-scroll-proportion="0.71854305">
+            <state line="97" column="54" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.54966885">
               <folding>
-                <element signature="e#1846#1866#0" expanded="true" />
-                <element signature="e#2125#2157#0" expanded="true" />
-                <element signature="e#2536#2941#0" expanded="true" />
-                <element signature="e#2930#2931#0" expanded="true" />
+                <element signature="e#1828#1848#0" expanded="true" />
+                <element signature="e#2107#2139#0" expanded="true" />
+                <element signature="e#2518#2902#0" expanded="true" />
+                <element signature="e#2891#2892#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,7 +83,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+            <state line="15" column="68" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,8 +107,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java" />
         <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java" />
+        <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java" />
       </list>
     </option>
   </component>
@@ -363,7 +363,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1850" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -379,7 +379,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6709265" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -449,19 +449,19 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+        <state line="15" column="68" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="56" selection-start="4407" selection-end="4407" vertical-scroll-proportion="0.71854305">
+        <state line="97" column="54" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.54966885">
           <folding>
-            <element signature="e#1846#1866#0" expanded="true" />
-            <element signature="e#2125#2157#0" expanded="true" />
-            <element signature="e#2536#2941#0" expanded="true" />
-            <element signature="e#2930#2931#0" expanded="true" />
+            <element signature="e#1828#1848#0" expanded="true" />
+            <element signature="e#2107#2139#0" expanded="true" />
+            <element signature="e#2518#2902#0" expanded="true" />
+            <element signature="e#2891#2892#0" expanded="true" />
           </folding>
         </state>
       </provider>
