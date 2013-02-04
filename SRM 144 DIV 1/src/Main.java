@@ -14,10 +14,10 @@ public class Main {
 
         System.out.println(Arrays.toString(lottery.sortByOdds(new String[]
                 {
-                        "PICK ANY THREE: 12 3 F F"
-                        , "PICK THREE IN ORDER: 12 3 T F"
-                        , "PICK THREE DIFFERENT: 12 3 F T"
-                        , "PICK THREE LIMITED: 12 3 T T"
+                        "PICK ANY THREE: 10 3 F F"
+                        , "PICK THREE IN ORDER: 10 3 T F"
+                        , "PICK THREE DIFFERENT: 10 3 F T"
+                        , "PICK THREE LIMITED: 10 3 T T"
                 })));
 
         System.out.println(Arrays.toString(lottery.sortByOdds(new String[]

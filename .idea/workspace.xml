@@ -5,9 +5,9 @@
     <ignored path="TopCoder.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359958687948" ignored="false" />
-    <file path="/Lottery.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359970990125" ignored="false" />
+    <file path="/Lottery.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359975651833" ignored="false" />
     <file path="/Main.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359958887658" ignored="false" />
-    <file path="/fragment.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359970800418" ignored="false" />
+    <file path="/fragment.java" changelist="a9d8db38-1eab-44ab-8d31-8b36a66c1677" time="1359976202136" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,12 +69,16 @@
       <file leaf-file-name="Lottery.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="54" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.54966885">
+            <state line="99" column="54" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.5066225">
               <folding>
-                <element signature="e#1828#1848#0" expanded="true" />
-                <element signature="e#2107#2139#0" expanded="true" />
-                <element signature="e#2518#2902#0" expanded="true" />
-                <element signature="e#2891#2892#0" expanded="true" />
+                <element signature="e#2922#2942#0" expanded="true" />
+                <element signature="e#3202#3234#0" expanded="true" />
+                <element signature="e#3886#4270#0" expanded="true" />
+                <element signature="e#4259#4260#0" expanded="true" />
+                <element signature="e#8188#8218#0" expanded="true" />
+                <element signature="e#8547#8565#0" expanded="true" />
+                <element signature="e#9094#9124#0" expanded="true" />
+                <element signature="e#9462#9480#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,7 +87,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="68" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+            <state line="19" column="49" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,8 +111,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java" />
         <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java" />
+        <option value="$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java" />
       </list>
     </option>
   </component>
@@ -202,6 +206,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="vcs.Git" />
@@ -449,19 +454,23 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="68" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+        <state line="19" column="49" selection-start="770" selection-end="770" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SRM 144 DIV 1/src/Lottery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="54" selection-start="3664" selection-end="3664" vertical-scroll-proportion="0.54966885">
+        <state line="99" column="54" selection-start="3508" selection-end="3508" vertical-scroll-proportion="0.5066225">
           <folding>
-            <element signature="e#1828#1848#0" expanded="true" />
-            <element signature="e#2107#2139#0" expanded="true" />
-            <element signature="e#2518#2902#0" expanded="true" />
-            <element signature="e#2891#2892#0" expanded="true" />
+            <element signature="e#2922#2942#0" expanded="true" />
+            <element signature="e#3202#3234#0" expanded="true" />
+            <element signature="e#3886#4270#0" expanded="true" />
+            <element signature="e#4259#4260#0" expanded="true" />
+            <element signature="e#8188#8218#0" expanded="true" />
+            <element signature="e#8547#8565#0" expanded="true" />
+            <element signature="e#9094#9124#0" expanded="true" />
+            <element signature="e#9462#9480#0" expanded="true" />
           </folding>
         </state>
       </provider>
