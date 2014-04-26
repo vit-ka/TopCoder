@@ -2,9 +2,9 @@ import java.util.*;
 import java.math.*;
 import static java.lang.Math.*;
 
-public class Lottery {
+public class EllysSortingTrimmer {
 	
-	public String[] sortByOdds(String[] rules) {
+	public String getMin(String S, int L) {
 		return null;
 	}
 }
