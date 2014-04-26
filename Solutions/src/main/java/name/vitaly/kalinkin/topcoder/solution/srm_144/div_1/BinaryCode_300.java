@@ -6,32 +6,54 @@ public class BinaryCode_300 {
     }
 
     private String decodeAssumingFirstDigit(char firstDigit, String message) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+        result.append(firstDigit);
 
-        int prevDigit = firstDigit - '0';
-        int curDigit = message.charAt(0) - '0' - prevDigit;
+        int prevPrevDecodedSymbol = 0;
+        int preDecodedSymbol = firstDigit - '0';
 
-        result += prevDigit;
-        result += curDigit;
+        for (int i = 0; i < message.length(); ++i) {
+            int currentEncodedSymbol = message.charAt(i) - '0';
 
-        if (prevDigit > 1 || prevDigit < 0)
-            return "NONE";
+            int currentDecodedSymbol = decodeCurrentSymbol(preDecodedSymbol, prevPrevDecodedSymbol, currentEncodedSymbol);
 
-        if (curDigit > 1 || curDigit < 0)
-            return "NONE";
-
-        for (int i = 1; i < message.length(); ++i) {
-            int tempDigit =  message.charAt(i) - '0' - prevDigit - curDigit;
-
-            if (tempDigit > 1 || tempDigit < 0)
+            if (currentDecodedSymbol < 0 || currentDecodedSymbol > 1) {
                 return "NONE";
+            }
 
-            prevDigit = curDigit;
-            curDigit = tempDigit;
-            if (i != message.length() - 1)
-                result += curDigit;
+            // Do not append the last character because it's a control one.
+            if (i + 1 < message.length())
+                result.append(Character.toChars(currentDecodedSymbol + '0'));
+
+            prevPrevDecodedSymbol = preDecodedSymbol;
+            preDecodedSymbol = currentDecodedSymbol;
         }
 
-        return result;
+        if (!checkAnswer(result.toString(), message))
+            return "NONE";
+
+        return result.toString();
+    }
+
+    private boolean checkAnswer(String answer, String originalMessage) {
+        for (int i = 0; i < answer.length(); ++i) {
+            int currentEncodedSymbol = encodeCurrentSymbol(answer, i);
+
+            if (currentEncodedSymbol != originalMessage.charAt(i) - '0')
+                return false;
+        }
+
+        return true;
+    }
+
+    private int encodeCurrentSymbol(String answer, int index) {
+        int prevSymbol = index != 0 ? answer.charAt(index - 1) - '0' : 0;
+        int curSymbol = answer.charAt(index) - '0';
+        int nextSymbol = index + 1 < answer.length() ? answer.charAt(index + 1) - '0' : 0;
+        return prevSymbol + curSymbol + nextSymbol;
+    }
+
+    private int decodeCurrentSymbol(int prevDecodedSymbol, int prevPrevDecodedSymbol, int curEncodedSymbol) {
+        return curEncodedSymbol - prevDecodedSymbol - prevPrevDecodedSymbol;
     }
 }
