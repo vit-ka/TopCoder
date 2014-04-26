@@ -1,0 +1,57 @@
+<html><body bgcolor="#000000" text="#ffffff"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td>Farmer John has a huge rectangular pasture for his sheep.
+The pasture is divided into a grid of unit square cells.
+The sheep can travel freely between the cells.
+There is a wall around the pasture, so the sheep cannot leave it.<br></br><br></br>
+One day, Farmer John found that wolves have infested the pasture through holes in the wall.
+Farmer John has fixed those holes, but the damage has been done: there are now some wolves in the pasture.
+More precisely, some cells of the pasture contain sheep, some contain wolves and some are empty.
+There are no cells that contain both sheep and wolves, and Farmer John would like to keep it that way.
+To make sure that the wolves cannot reach his sheep, Farmer John is going to build some fences.<br></br><br></br>
+Each new fence has to be placed either between two rows or between two columns of cells.
+Each fence will start at one end of the pasture and reach all the way to the other end.
+Neither sheep nor wolves can cross the fences.
+The new fences must be placed in such a way that none of the wolves will be able to reach a sheep.<br></br><br></br>
+You are given a String[] <b>field</b>.
+For each i and j, character j of element i of <b>field</b> represents the cell in row i, column j of the grid.
+(All indices in the previous sentence are 0-based.)
+Each character in <b>field</b> will be one of 'S' (a cell with sheep), 'W' (a cell with wolves), and '.' (an empty cell).<br></br><br></br>
+Return the smallest number of new fences needed to separate the wolves from the sheep.</td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>WolvesAndSheep</td></tr><tr><td>Method:</td><td>getmin</td></tr><tr><td>Parameters:</td><td>String[]</td></tr><tr><td>Returns:</td><td>int</td></tr><tr><td>Method signature:</td><td>int getmin(String[] field)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>256</td></tr></table></td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td><b>field</b> will contain between 1 and 16 elements, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>field</b> will contain between 1 and 16 characters, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>field</b> will contain the same number of characters.</td></tr><tr><td align="center" valign="top">-</td><td>Each character of each element of <b>field</b> will be 'S', 'W' or '.'.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;W.WSS&quot;,
+ &quot;WW.S.&quot;,
+ &quot;.SSS.&quot;,
+ &quot;SSS.S&quot;,
+ &quot;.SS.S&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 2</pre></td></tr><tr><td><table><tr><td colspan="2">The optimal solution is to build two fences: one between rows 1 and 2, the other between columns 2 and 3.
+(All those indices are 0-based.)
+This will divide the pasture into four smaller rectangles.
+One of those rectangles (the 2 by 3 rectangle in the top left corner) will contain only wolves, the other three will contain only sheep.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;.....&quot;,
+ &quot;.....&quot;,
+ &quot;.....&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 0</pre></td></tr><tr><td><table><tr><td colspan="2">There are no animals, thus we need no fences.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;.SS&quot;,
+ &quot;...&quot;,
+ &quot;S..&quot;,
+ &quot;W.W&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 1</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;WWWSWWSSWWW&quot;,
+ &quot;WWSWW.SSWWW&quot;,
+ &quot;WS.WSWWWWS.&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 10</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">4)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;.W.S.W.W&quot;,
+ &quot;W.W.S.W.&quot;,
+ &quot;.S.S.W.W&quot;,
+ &quot;S.S.S.W.&quot;,
+ &quot;.S.W.W.S&quot;,
+ &quot;S.S.W.W.&quot;,
+ &quot;.W.W.W.S&quot;,
+ &quot;W.W.S.S.&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 7</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">5)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;W.SSWWSSSW.SS&quot;,
+ &quot;.SSSSW.SSWWWW&quot;,
+ &quot;.WWWWS.WSSWWS&quot;,
+ &quot;SS.WSS..W.WWS&quot;,
+ &quot;WSSS.SSWS.W.S&quot;,
+ &quot;WSS.WS...WWWS&quot;,
+ &quot;S.WW.S.SWWWSW&quot;,
+ &quot;WSSSS.SSW...S&quot;,
+ &quot;S.WWSW.WWSWSW&quot;,
+ &quot;.WSSS.WWSWWWS&quot;,
+ &quot;..SSSS.WWWSSS&quot;,
+ &quot;SSWSWWS.W.SSW&quot;,
+ &quot;S.WSWS..WSSS.&quot;,
+ &quot;WS....W..WSS.&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 24</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">6)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;WW..SS&quot;,
+ &quot;WW..SS&quot;,
+ &quot;......&quot;,
+ &quot;......&quot;,
+ &quot;SS..WW&quot;,
+ &quot;SS..WW&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 2</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>
