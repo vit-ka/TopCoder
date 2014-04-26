@@ -1,6 +1,4 @@
-package name.vitaly.kalinkin.topcoder.solution.srm_144.div_1;
-
-public class BinaryCode_300 {
+public class BinaryCode {
     public String[] decode(String message) {
         return new String[] { decodeAssumingFirstDigit('0', message), decodeAssumingFirstDigit('1', message)};
     }
