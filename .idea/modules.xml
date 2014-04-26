@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BinaryCode/BinaryCode.iml" filepath="$PROJECT_DIR$/BinaryCode/BinaryCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lottery/Lottery.iml" filepath="$PROJECT_DIR$/Lottery/Lottery.iml" />
     </modules>
   </component>
 </project>
