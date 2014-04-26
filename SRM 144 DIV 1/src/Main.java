@@ -42,7 +42,13 @@ public class Main {
         System.out.println(penLift.numTimes(new String[]{"-10 0 10 0","0 -10 0 10"}, 1));
     }
 
+    public static void runBinaryCode() {
+        BinaryCode code = new BinaryCode();
+        String[] result = code.decode("122");
+        System.out.println(result[0] + ":" + result[1]);
+    }
+
     public static void main(String[] args) {
-        runPenLift();
+        runBinaryCode();
     }
 }
