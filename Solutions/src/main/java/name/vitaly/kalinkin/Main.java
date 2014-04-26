@@ -1,3 +1,9 @@
+package name.vitaly.kalinkin;
+
+import name.vitaly.kalinkin.topcoder.solution.srm_144.div_1.BinaryCode_300;
+import name.vitaly.kalinkin.topcoder.solution.srm_144.div_1.Lottery;
+import name.vitaly.kalinkin.topcoder.solution.srm_144.div_1.PenLift;
+
 import java.util.Arrays;
 
 public class Main {
@@ -43,7 +49,7 @@ public class Main {
     }
 
     public static void runBinaryCode() {
-        BinaryCode code = new BinaryCode();
+        BinaryCode_300 code = new BinaryCode_300();
         String[] result = code.decode("122");
         System.out.println(result[0] + ":" + result[1]);
     }

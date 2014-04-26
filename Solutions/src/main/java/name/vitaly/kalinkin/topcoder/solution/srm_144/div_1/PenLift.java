@@ -1,3 +1,5 @@
+package name.vitaly.kalinkin.topcoder.solution.srm_144.div_1;
+
 import java.util.ArrayList;
 import java.util.List;
 
