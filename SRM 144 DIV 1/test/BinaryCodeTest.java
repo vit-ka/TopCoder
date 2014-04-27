@@ -38,4 +38,10 @@ public class BinaryCodeTest {
 		String message = "12221112222221112221111111112221111";
 		assertArrayEquals(new String[] { "01101001101101001101001001001101001",  "10110010110110010110010010010110010" }, new BinaryCode().decode(message));
 	}
+
+    @Test(timeout=2000)
+    public void test6() {
+        String message = "122";
+        assertArrayEquals(new String[] { "011",  "NONE" }, new BinaryCode().decode(message));
+    }
 }

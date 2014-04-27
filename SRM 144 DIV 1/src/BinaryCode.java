@@ -23,33 +23,15 @@ public class BinaryCode {
             // Do not append the last character because it's a control one.
             if (i + 1 < message.length())
                 result.append(Character.toChars(currentDecodedSymbol + '0'));
+            // If the last symbol is not null. Then we have inconsistency with the first assumed symbol.
+            else if (currentDecodedSymbol != 0)
+                return "NONE";
 
             prevPrevDecodedSymbol = preDecodedSymbol;
             preDecodedSymbol = currentDecodedSymbol;
         }
 
-        if (!checkAnswer(result.toString(), message))
-            return "NONE";
-
         return result.toString();
-    }
-
-    private boolean checkAnswer(String answer, String originalMessage) {
-        for (int i = 0; i < answer.length(); ++i) {
-            int currentEncodedSymbol = encodeCurrentSymbol(answer, i);
-
-            if (currentEncodedSymbol != originalMessage.charAt(i) - '0')
-                return false;
-        }
-
-        return true;
-    }
-
-    private int encodeCurrentSymbol(String answer, int index) {
-        int prevSymbol = index != 0 ? answer.charAt(index - 1) - '0' : 0;
-        int curSymbol = answer.charAt(index) - '0';
-        int nextSymbol = index + 1 < answer.length() ? answer.charAt(index + 1) - '0' : 0;
-        return prevSymbol + curSymbol + nextSymbol;
     }
 
     private int decodeCurrentSymbol(int prevDecodedSymbol, int prevPrevDecodedSymbol, int curEncodedSymbol) {
