@@ -1,4 +1,5 @@
 public class BinaryCode {
+
     public String[] decode(String message) {
         return new String[] { decodeAssumingFirstDigit('0', message), decodeAssumingFirstDigit('1', message)};
     }
