@@ -35,6 +35,18 @@ public class PenLiftTest {
 		int n = 1;
 		assertEquals(6, new PenLift().numTimes(segments, n));
 	}
+
+    @Test(timeout=2000)
+    public void test3_1() {
+        String[] segments = new String[] {"0 0 1 0",   "2 0 4 0",   "5 0 8 0",   "9 0 13 0",
+                "0 1 1 1",   "2 1 4 1",   "5 1 8 1",   "9 1 13 1",
+                "0 0 0 1",   "1 0 1 1",   "2 0 2 1",   "3 0 3 1",
+                "4 0 4 1",   "5 0 5 1",   "6 0 6 1",   "7 0 7 1",
+                "8 0 8 1",   "9 0 9 1",   "10 0 10 1", "11 0 11 1",
+                "12 0 12 1", "13 0 13 1"};
+        int n = 8;
+        assertEquals(3, new PenLift().numTimes(segments, n));
+    }
 	
 	@Test(timeout=2000)
 	public void test4() {
