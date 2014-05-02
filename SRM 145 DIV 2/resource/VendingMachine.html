@@ -1,0 +1,144 @@
+<html><body bgcolor="#000000" text="#ffffff"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><p>
+<i>Note that in the following problem statement, all quotes and angle brackets are for clarity</i>
+</p>
+
+<p>
+A certain vending machine delves out its goods from a rotating cylinder, which can rotate around in both clockwise and counter-clockwise directions.  The cylinder has a number of shelves on it, and each shelf is divided into a number of columns.  On the front of the machine, there is a panel of doors that extends the entire height of the column.  There is one door for each shelf, which is the width of one column.  When a purchase is made, the user uses two buttons to rotate the cylinder so their purchase is located at a door.  They make their purchase by sliding the appropriate door open, and removing the item (there can only be one item per column on a particular shelf).  The cylinder can rotate in a complete circle, and so there are always two ways to get from a particular column to another column.
+</p>
+
+<p>
+Because the vending machine company wants to sell the most expensive items possible, and the machine can only show one column at a time, the machine will always try to put forth the most expensive column available.  The price of a column is calculated by adding up all the prices of the remaining items in that column.  The most expensive column is defined to be the one with the maximum price.  If 5 minutes have elapsed since the last purchase was made, the machine rotates the cylinder to the most expensive column.  If, however, another purchase has been made before the 5 minutes are up, the rotation does not occur, and the 5 minute timer is reset.
+</p>
+
+<p>
+Recently, some machines' rotating motors have been failing early, and the company wants to see if it is because the machines rotate to show their expensive column too often.  To determine this, they have hired you to simulate purchases and see how long the motor is running.
+</p>
+
+<p>
+You will be given the <b>prices</b> of all the items in the vending machine in a String[].  Each element of <b>prices</b> will be a single-space separated list of integers, which are the prices (in cents) of the items.  The Nth integer in the Mth element of <b>prices</b> represents the price of the Nth column in the Mth shelf in the cylinder.  You will also be given a String[] <b>purchases</b>.  Each element in <b>purchases</b> will be in the format:<br></br> <tt>&quot;&lt;shelf&gt;,&lt;column&gt;:&lt;time&gt;&quot;</tt><br></br>
+&lt;shelf&gt; is a 0-based integer which identifies the shelf that the item was purchased from.  &lt;column&gt; is a 0-based integer which identifies the column the item was purchased from.  &lt;time&gt; is an integer which represents the time, in minutes, since the machine was turned on.
+</p>
+
+<p>
+In the simulation, the motor needs to run for 1 second in order to rotate to an adjacent column.  When the machine is turned on, column 0 is facing out, and it immediately rotates to the most expensive column, even if the first purchase is at time 0.  The machine also rotates to the most expensive column at the end of the simulation, after the last purchase.  Note that when an item is purchased, its price is no longer used in calculating the price of the column it is in.  When the machine rotates to the most expensive column, or when a user rotates the cylinder, the rotation is in the direction which takes the least amount of time.  For example, in a 4-column cylinder, if column 0 is displayed, and the cylinder is rotated to column 3, it can be rotated backwards, which takes 1 second, versus rotating forwards which takes 3 seconds.
+</p>
+
+<p>
+If a user tries to purchase an item that was already purchased, this is an incorrect simulation, and your method should return -1.  Otherwise, your method should return how long the motor was running, in seconds.
+</p>
+</td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>VendingMachine</td></tr><tr><td>Method:</td><td>motorUse</td></tr><tr><td>Parameters:</td><td>String[], String[]</td></tr><tr><td>Returns:</td><td>int</td></tr><tr><td>Method signature:</td><td>int motorUse(String[] prices, String[] purchases)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>64</td></tr></table></td></tr><tr><td colspan="2"><h3>Notes</h3></td></tr><tr><td align="center" valign="top">-</td><td>When rotating to the most expensive column, if two columns have the same price, rotate to the one with the lowest column number (see example 0).</td></tr><tr><td align="center" valign="top">-</td><td>If two purchases are less than 5 minutes apart, the machine does not perform a rotation to the most expensive column between the purchases.  If two purchases are 5 or more minutes apart, the machine rotates to the most expensive column between the two purchases.</td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td><b>prices</b> will have between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>prices</b> will have between 5 and 50 characters, is a single-space separated list of integers, and has no leading or trailing spaces.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>prices</b> will have the same number of integers in it.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>prices</b> will have at least 3 integers in it.</td></tr><tr><td align="center" valign="top">-</td><td>Each integer in <b>prices</b> will be between 1 and 10000, inclusive, and will not contain leading 0's.</td></tr><tr><td align="center" valign="top">-</td><td><b>purchases</b> will have between 1 and 50 elements, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>purchases</b> will be in the format <tt>&quot;&lt;shelf&gt;,&lt;column&gt;:&lt;time&gt;&quot;</tt> (angle brackets and quotes are for clarity only), where &lt;shelf&gt;, &lt;column&gt;, and &lt;time&gt; are all integers.</td></tr><tr><td align="center" valign="top">-</td><td>In each element of <b>purchases</b>, &lt;shelf&gt; will be between 0 and M - 1, inclusive, where M is the number of elements in prices.</td></tr><tr><td align="center" valign="top">-</td><td>In each element of <b>purchases</b>, &lt;column&gt; will be between 0 and N - 1, inclusive, where N is the number of integers in each element of prices.</td></tr><tr><td align="center" valign="top">-</td><td>In each element of <b>purchases</b>, &lt;time&gt; will be between 0 and 1000, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td>In each element of <b>purchases</b>, &lt;shelf&gt;, &lt;column&gt;, and &lt;time&gt; will not contain extra leading 0's.</td></tr><tr><td align="center" valign="top">-</td><td><b>purchases</b> will be sorted in strictly ascending order by &lt;time&gt;.  This means that each purchase must occur later than all previous ones.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;100 100 100&quot;}</pre></td></tr><tr><td><pre>{&quot;0,0:0&quot;, &quot;0,2:5&quot;, &quot;0,1:10&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 4</pre></td></tr><tr><td><table><tr><td colspan="2"><p>
+The vending machine has three columns, and only one row.  Since all three items are the same price, they are all the most expensive, and therefore, the lowest numbered column is rotated to.  Since the machine starts out at column 0, no rotation is performed before the first purchase.  The starting configuration is (*'s denote the currently displayed column):
+</p>
+<pre> 
++-----+-----+-----+
+| 100 | 100 | 100 |
++*****+-----+-----+
+</pre>
+
+<p>
+In the first purchase, the customer does not rotate the cylinder because the item he wants is already displayed. The configuration of the vending machine is now:
+</p>
+<pre>
++-----+-----+-----+
+|  0  | 100 | 100 |
++*****+-----+-----+
+</pre>
+<p>
+Since the next purchase is at least 5 minutes away, the machine performs a rotation to the most expensive column.  Both column 1 and 2 are now 100 apiece, so it rotates to the smallest index of these, column 1.  The fastest way there is to rotate forward 1 column, yielding 1 second of motor use:
+</p>
+<pre>
++-----+-----+-----+
+|  0  | 100 | 100 |
++-----+*****+-----+
+</pre>
+
+<p>
+The next customer purchases the item in column 2, which is 1 column away, so add 1 second to the motor use.  Because another 5 minutes passes, the most expensive column is displayed, which is now column 1.  Add 1 more second for the rotation.  The configuration is now:
+</p>
+<pre>
++-----+-----+-----+
+|  0  | 100 |  0  |
++-----+*****+-----+
+</pre>
+
+<p>
+The final customer purchases from column 1, (which is already displayed), and the final most expensive column is rotated to.  Since all columns are the same price again (0), column 0 is displayed.  It takes 1 second to get back there, so add 1 more second.
+</p></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;100 200 300 400 500 600&quot;}</pre></td></tr><tr><td><pre>{&quot;0,2:0&quot;, &quot;0,3:5&quot;, &quot;0,1:10&quot;, &quot;0,4:15&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 17</pre></td></tr><tr><td><table><tr><td colspan="2"><p>
+The most expensive column during this whole example is column 5.  Since all purchases are at least 5 minutes apart, the most expensive column is rotated to each time.
+</p>
+
+<p>
+Before the purchases start, add 1 second for rotating to column 5.<br></br>
+The first purchase  is 3 columns away, so add 3 seconds to get there, and 3 seconds to get back to column 5<br></br>
+The second purchase is 2 columns away, so add 4 seconds to get there and back.<br></br>
+The third purchase is also 2 columns away, so add 4 more seconds.<br></br>
+The final purchase is only one column away, so add 2 more seconds.
+</p>
+
+<p>
+The final configuration is:
+</p>
+<pre>
++-----+-----+-----+-----+-----+-----+
+| 100 |  0  |  0  |  0  |  0  | 600 |
++-----+-----+-----+-----+-----+*****+
+</pre>
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;100 200 300 400 500 600&quot;}</pre></td></tr><tr><td><pre>{&quot;0,2:0&quot;, &quot;0,3:4&quot;, &quot;0,1:8&quot;, &quot;0,4:12&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 11</pre></td></tr><tr><td><table><tr><td colspan="2"><p>
+This is the same as example 1, except now, the purchases are all less than 5 minutes apart.
+</p></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;100 100 100&quot;}</pre></td></tr><tr><td><pre>{&quot;0,0:10&quot;, &quot;0,0:11&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: -1</pre></td></tr><tr><td><table><tr><td colspan="2"><p>
+The second purchase is illegal since the item was already purchased
+</p></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">4)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{&quot;100 200 300&quot;,
+ &quot;600 500 400&quot;}</pre></td></tr><tr><td><pre>{&quot;0,0:0&quot;, &quot;1,1:10&quot;, &quot;1,2:20&quot;,
+ &quot;0,1:21&quot;, &quot;1,0:22&quot;, &quot;0,2:35&quot;}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 6</pre></td></tr><tr><td><table><tr><td colspan="2"><p>
+A two-row example.  The configurations just before each purchase are:
+</p>
+<pre>
+purchase 1:
++-----+-----+-----+
+| 100 | 200 | 300 |
++-----+-----+-----+
+| 600 | 500 | 400 |
++*****+-----+-----+
+
+purchase 2:
++-----+-----+-----+
+|  0  | 200 | 300 |
++-----+-----+-----+
+| 600 | 500 | 400 |
++-----+*****+-----+
+
+purchase 3:
++-----+-----+-----+
+|  0  | 200 | 300 |
++-----+-----+-----+
+| 600 |  0  | 400 |
++-----+-----+*****+
+
+purchase 4:
++-----+-----+-----+
+|  0  | 200 | 300 |
++-----+-----+-----+
+| 600 |  0  |  0  |
++-----+-----+*****+
+
+purchase 5:
++-----+-----+-----+
+|  0  |  0  | 300 |
++-----+-----+-----+
+| 600 |  0  |  0  |
++-----+*****+-----+
+
+purchase 6:
++-----+-----+-----+
+|  0  |  0  | 300 |
++-----+-----+-----+
+|  0  |  0  |  0  |
++-----+-----+*****+
+
+final:
++-----+-----+-----+
+|  0  |  0  |  0  |
++-----+-----+-----+
+|  0  |  0  |  0  |
++*****+-----+-----+
+</pre></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>
