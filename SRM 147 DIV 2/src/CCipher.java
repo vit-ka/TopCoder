@@ -11,7 +11,7 @@ public class CCipher {
 	}
 
     private char decodeLetter(char c, int shift) {
-        int codePoint = ((c - 'A') + 26 - shift) % 26 + Character.codePointAt(new char[]{'A'}, 0);
-        return Character.toChars(codePoint)[0];
+        int codePoint = ((c - 'A') + 26 - shift) % 26 + 'A';
+        return (char) codePoint;
     }
 }
