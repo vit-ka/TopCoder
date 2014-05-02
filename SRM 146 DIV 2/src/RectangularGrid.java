@@ -1,6 +1,6 @@
 public class RectangularGrid {
-	
-	public long countRectangles(int width, int height) {
+
+    public long countRectangles(int width, int height) {
 
         long sum = 0;
 
@@ -21,5 +21,5 @@ public class RectangularGrid {
         }
 
         return sum;
-	}
+    }
 }
