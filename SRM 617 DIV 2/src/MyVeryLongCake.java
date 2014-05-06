@@ -1,28 +1,45 @@
-import java.util.*;
-import java.math.*;
-import static java.lang.Math.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyVeryLongCake {
 	
 	public int cut(int n) {
-        int sum = 0;
+        long result = n;
+        long num = 1;
 
-        for (int i = 1; i <= n; ++i) {
-            if (gcd(n, i) != 1) {
-                sum++;
+        List<Integer> primeFactors = getPrimeFactors(n);
+        for (int primeFactor : primeFactors) {
+            result *= primeFactor - 1;
+            num *= primeFactor;
+        }
+
+        return (int) (n - result / num);
+	}
+
+    private List<Integer> getPrimeFactors(int number) {
+        List<Integer> result = new ArrayList<Integer>();
+
+        for (int i = 1; i <= number / i; i++) {
+            if (number % i == 0) {
+                if (isSimple(i))
+                    result.add(i);
+                if (isSimple(number / i))
+                    result.add(number / i);
             }
         }
 
-        return sum;
-	}
+        return result;
+    }
 
-    private int gcd(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+    private boolean isSimple(int number) {
+        if (number == 1)
+            return false;
+
+        for (int i = 2; i <= number / i; i++) {
+            if (number % i == 0)
+                return false;
         }
 
-        return a;
+        return true;
     }
 }
