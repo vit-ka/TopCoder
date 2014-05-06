@@ -23,7 +23,7 @@ public class MyVeryLongCake {
             if (number % i == 0) {
                 if (isSimple(i))
                     result.add(i);
-                if (isSimple(number / i))
+                if (i != number / i &&  isSimple(number / i))
                     result.add(number / i);
             }
         }

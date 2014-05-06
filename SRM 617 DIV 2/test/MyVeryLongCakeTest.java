@@ -32,4 +32,10 @@ public class MyVeryLongCakeTest {
 		int n = 577007436;
 		assertEquals(384671628, new MyVeryLongCake().cut(n));
 	}
+
+    @Test(timeout=2000)
+    public void test5() {
+        int n = 4;
+        assertEquals(2, new MyVeryLongCake().cut(n));
+    }
 }
