@@ -1,0 +1,40 @@
+<html><body bgcolor="#000000" text="#ffffff"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><p>
+Shiny has a company.
+There are N employees in her company.
+The employees are numbered 0 through N-1 in order in which they joined the company.
+</p>
+<br></br>
+<p>
+Employee 0 is the only employee with no boss.
+Every other employee has precisely one direct boss in the company.
+You are given a int[] <b>superior</b> with N elements.
+Element 0 of <b>superior</b> will be -1 to denote that employee 0 has no boss.
+For each i between 1 and N-1, inclusive, element i of <b>superior</b> will be the number of the boss of employee i.
+</p>
+<br></br>
+<p>
+For each employee, their boss joined the company before them.
+Formally, for each i between 1 and N-1, inclusive, <b>superior</b>[i] will be between 0 and i-1, inclusive.
+</p>
+<br></br>
+<p>
+Each employee only does one type of work.
+You are given a int[] <b>workType</b> with N elements.
+(Different integers represent different types of work.)
+</p>
+<br></br>
+<p>
+Each employee of the company has their own <i>department</i>.
+The department of employee x is formed by employee x and all the employees such that x is their boss.
+Formally, for any y different from x, employee y belongs into the department of employee x if and only if <b>superior</b>[y]=x.
+Note that if <b>superior</b>[z]=y and <b>superior</b>[y]=x, employee z <i>does not</i> belong into the department of employee x.
+</p>
+<br></br>
+<p>
+A department is called <i>diverse</i> if no two employees in the department do the same type of work.
+Compute and return the number of diverse departments in Shiny's company.
+</p></td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>GoodCompanyDivTwo</td></tr><tr><td>Method:</td><td>countGood</td></tr><tr><td>Parameters:</td><td>int[], int[]</td></tr><tr><td>Returns:</td><td>int</td></tr><tr><td>Method signature:</td><td>int countGood(int[] superior, int[] workType)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>256</td></tr></table></td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td><b>superior</b> will contain between 1 and 100 elements, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td><b>workType</b> will contain the same number of elements as superior.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>workType</b> will be between 1 and 100, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td><b>superior</b>[0] will be -1.</td></tr><tr><td align="center" valign="top">-</td><td>For each valid i&gt;0, <b>superior</b>[i] will be between 0 and i-1, inclusive.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-1, 0}</pre></td></tr><tr><td><pre>{1, 2}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 2</pre></td></tr><tr><td><table><tr><td colspan="2">The department of employee 0 contains employees 0 and 1.
+The department of employee 1 contains employee 1 only.
+Both departments are diverse.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-1, 0}</pre></td></tr><tr><td><pre>{1, 1}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 1</pre></td></tr><tr><td><table><tr><td colspan="2">The departments are the same as in Example 0.
+However, now the department of employee 0 is not diverse: it contains two employees who do the same type of work.
+Only the department of employee 1 is now diverse.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-1, 0, 1, 1}</pre></td></tr><tr><td><pre>{1, 4, 3, 2}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 4</pre></td></tr><tr><td><table><tr><td colspan="2">Note that in this test case the department of employee 0 contains only employees 0 and 1. Employees 2 and 3 do not belong into the department of employee 0.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-1, 0, 1, 0, 0}</pre></td></tr><tr><td><pre>{3, 3, 5, 2, 2}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 4</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">4)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-1, 0, 1, 1, 1, 0, 2, 5}</pre></td></tr><tr><td><pre>{1, 1, 2, 3, 4, 5, 3, 3}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 7</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">5)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{-1, 0, 0, 1, 1, 3, 0, 2, 0, 5, 2, 5, 5, 6, 1, 2, 11, 12, 10, 4, 7, 16, 10, 9, 12, 18, 15, 23, 20, 7, 4}</pre></td></tr><tr><td><pre>{4, 6, 4, 7, 7, 1, 2, 8, 1, 7, 2, 4, 2, 9, 11, 1, 10, 11, 4, 6, 11, 7, 2, 8, 9, 9, 10, 10, 9, 8, 8}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 27</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>
