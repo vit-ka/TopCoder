@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MyVeryLongCake {
 	
@@ -7,7 +7,7 @@ public class MyVeryLongCake {
         long result = n;
         long num = 1;
 
-        List<Integer> primeFactors = getPrimeFactors(n);
+        Set<Integer> primeFactors = getPrimeFactors(n);
         for (int primeFactor : primeFactors) {
             result *= primeFactor - 1;
             num *= primeFactor;
@@ -16,14 +16,14 @@ public class MyVeryLongCake {
         return (int) (n - result / num);
 	}
 
-    private List<Integer> getPrimeFactors(int number) {
-        List<Integer> result = new ArrayList<Integer>();
+    private Set<Integer> getPrimeFactors(int number) {
+        Set<Integer> result = new HashSet<Integer>();
 
         for (int i = 1; i <= number / i; i++) {
             if (number % i == 0) {
                 if (isSimple(i))
                     result.add(i);
-                if (i != number / i &&  isSimple(number / i))
+                if (isSimple(number / i))
                     result.add(number / i);
             }
         }
