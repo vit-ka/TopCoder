@@ -1,43 +1,26 @@
-import java.util.*;
-import java.math.*;
-import static java.lang.Math.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class GoodCompanyDivTwo {
 	
 	public int countGood(int[] superior, int[] workType) {
-		Map<Integer, Map<Integer, Integer>> workTypeToDepartment = new HashMap<Integer, Map<Integer, Integer>>();
-
-        for (int i = 0; i < superior.length; ++i) {
-            int superE = superior[i];
-            int work = workType[i];
-
-            if (!workTypeToDepartment.containsKey(superE)) {
-                workTypeToDepartment.put(superE, new HashMap<Integer, Integer>());
-            }
-
-            if (!workTypeToDepartment.get(superE).containsKey(work)) {
-                workTypeToDepartment.get(superE).put(work, 0);
-            }
-
-            if (!workTypeToDepartment.containsKey(i)) {
-                workTypeToDepartment.put(i, new HashMap<Integer, Integer>());
-            }
-
-            if (!workTypeToDepartment.get(i).containsKey(work)) {
-                workTypeToDepartment.get(i).put(work, 0);
-            }
-
-            workTypeToDepartment.get(superE).put(work, workTypeToDepartment.get(superE).get(work) + 1);
-            workTypeToDepartment.get(i).put(work, workTypeToDepartment.get(superE).get(work) + 1);
-        }
 
         int sum = 0;
-        for (Map<Integer, Integer> workTypes : workTypeToDepartment.values()) {
+
+        for (int i = 0; i < superior.length; ++i) {
+            List<Integer> department = getDepartmentWorkTypesFor(i, superior, workType);
+
+            Collections.sort(department);
+
             boolean flag = true;
-            for (int numberOfWorkPerDepartment : workTypes.values()) {
-                if (numberOfWorkPerDepartment > 1) {
+            int previousWorkType = -1;
+            for (int emplWorkType : department) {
+                if (emplWorkType == previousWorkType) {
                     flag = false;
                 }
+
+                previousWorkType = emplWorkType;
             }
 
             if (flag)
@@ -46,4 +29,20 @@ public class GoodCompanyDivTwo {
 
         return sum;
 	}
+
+    private List<Integer> getDepartmentWorkTypesFor(int boss, int[] superior, int[] workType) {
+
+        List<Integer> result = new ArrayList<Integer>();
+
+        result.add(workType[boss]);
+
+        for (int i = 0; i < superior.length; ++i) {
+            if (superior[i] == boss) {
+                result.add(workType[i]);
+            }
+        }
+
+        return result;
+
+    }
 }
