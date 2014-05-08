@@ -1,0 +1,30 @@
+<html><body bgcolor="#000000" text="#ffffff"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><p>
+Shiny wants to give an award to one of the employees in her company.
+However, all her employees are doing perfect work, so it's hard to pick the one that gets the award.
+Therefore Shiny organized a game they will play to determine the winner.
+</p><br></br><p>
+At the beginning of the game, all <b>N</b> employees form a circle.
+Then, they receive t-shirts with numbers 1 through <b>N</b> in clockwise order along the circle.
+These numbers are never used in the game, we will just use them to identify the winner.
+</p><br></br><p>
+The game is played in turns.
+The turns are numbered starting from 1.
+In each turn, Shiny starts by standing in front of some employee (as specified below) and saying "one".
+Then she moves clockwise along the circle to the next employee and says "two".
+And so on, until the number she says reaches the threshold for that particular turn.
+The threshold for turn number t is t^3.
+(That is, the threshold is 1 for turn 1, 8 for turn 2, 27 for turn 3, and so on.)
+</p><br></br><p>
+At the end of each turn, the employee currently standing in front of Shiny (i.e., the one that received the number t^3) is eliminated.
+In the very first round Shiny starts in front of the employee with the number 1 on their t-shirt.
+In each of the following rounds, Shiny starts in front of the next employee clockwise from the one who just got eliminated.
+</p><br></br><p>
+When there is only one employee left in the game, the game ends and the employee wins the award.
+</p><br></br><p>
+You are given the int <b>N</b>.
+Return the t-shirt number of the employee who gets the award.
+</p></td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>ChooseTheBestOne</td></tr><tr><td>Method:</td><td>countNumber</td></tr><tr><td>Parameters:</td><td>int</td></tr><tr><td>Returns:</td><td>int</td></tr><tr><td>Method signature:</td><td>int countNumber(int N)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>256</td></tr></table></td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td><b>N</b> will between 1 and 5000, inclusive.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>3</pre></td></tr></table></td></tr><tr><td><pre>Returns: 2</pre></td></tr><tr><td><table><tr><td colspan="2">In the first round, Shiny stands in front of employee 1, says "one" and eliminates him.
+In the second round, Shiny starts in front of employee 2. She says "one" to employee 2, "two" to
+employee 3, "three" to employee 2 again, ..., and "eight" to employee 3. Thus, employee 3 
+gets eliminated and employee 2 wins the award.
+</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>6</pre></td></tr></table></td></tr><tr><td><pre>Returns: 6</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>10</pre></td></tr></table></td></tr><tr><td><pre>Returns: 8</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>1234</pre></td></tr></table></td></tr><tr><td><pre>Returns: 341</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>
