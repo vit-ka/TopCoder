@@ -1,8 +1,10 @@
 import java.util.*;
+import java.math.*;
+import static java.lang.Math.*;
 
 public class CandidatesSelectionEasy {
 
-	public int[] sort(String[] score, int x) {
+    public int[] sort(String[] score, int x) {
 
 
         final int xTemp = x;
@@ -37,7 +39,7 @@ public class CandidatesSelectionEasy {
         }
 
         return result;
-	}
+    }
 
     public class C {
         public String str;
