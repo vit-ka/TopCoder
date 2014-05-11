@@ -56,4 +56,13 @@ public class PairGameTest {
 		int d = 1;
 		assertEquals(2, new PairGame().maxSum(a, b, c, d));
 	}
+
+    @Test(timeout=2000)
+    public void test6() {
+        int a = 1000000;
+        int b = 1;
+        int c = 1000000;
+        int d = 1;
+        assertEquals(1000001, new PairGame().maxSum(a, b, c, d));
+    }
 }
