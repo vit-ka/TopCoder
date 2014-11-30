@@ -1,0 +1,34 @@
+<html><body bgcolor="#000000" text="#ffffff"><table><tr><td colspan="2"><h3>Problem Statement</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><p>
+We have a sequence of N positive integers: a[0] through a[N-1].
+You do not know these integers.
+All you know is the number of trailing zeros in their binary representations.
+You are given a int[] <b>d</b> with N elements.
+For each i, <b>d</b>[i] is the number of trailing zeros in the binary representation of a[i].
+</p>
+
+<p>
+For example, suppose that a[0]=40.
+In binary, 40 is 101000 which ends in three zeros.
+Therefore, <b>d</b>[0] will be 3.
+</p>
+
+<p>
+You like geometric sequences.
+(See the Notes section for a definition of a geometric sequence.)
+You would like to count all non-empty contiguous subsequences of the sequence a[0], a[1], ..., a[N-1] that can be geometric sequences (given the information you have in <b>d</b>).
+</p>
+
+<p>
+More precisely:
+For each pair (i,j) such that 0 &lt;= i &lt;= j &lt;= N-1, we ask the following question: "Given the values <b>d</b>[i] through <b>d</b>[j], is it possible that the values a[i] through a[j] form a geometric sequence?"
+</p>
+
+<p>
+For example, suppose that <b>d</b> = {0,1,2,3,2}.
+For i=0 and j=3 the answer is positive: it is possible that the values a[0] through a[3] are {1,2,4,8} which is a geometric sequence.
+For i=1 and j=4 the answer is negative: there is no geometric sequence with these numbers of trailing zeros in binary.
+</p>
+
+<p>
+Compute and return the number of contiguous subsequences of a[0], a[1], ..., a[N-1] that can be geometric sequences.
+</p></td></tr><tr><td colspan="2"><h3>Definition</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Class:</td><td>PotentialGeometricSequence</td></tr><tr><td>Method:</td><td>numberOfSubsequences</td></tr><tr><td>Parameters:</td><td>int[]</td></tr><tr><td>Returns:</td><td>int</td></tr><tr><td>Method signature:</td><td>int numberOfSubsequences(int[] d)</td></tr><tr><td colspan="2">(be sure your method is public)</td></tr></table></td></tr><tr><td colspan="2"><h3>Limits</h3></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td>Time limit (s):</td><td>2.000</td></tr><tr><td>Memory limit (MB):</td><td>256</td></tr></table></td></tr><tr><td colspan="2"><h3>Notes</h3></td></tr><tr><td align="center" valign="top">-</td><td>A geometric sequence is any sequence g[0], g[1], ..., g[k-1] such that there is a real number q (the quotient) with the property that for each valid i, g[i+1] = g[i]*q. For example, {1,2,4,8} is a geometric sequence with q=2, {7,7,7} is a geometric sequence with q=1, and {18,6,2} is a geometric sequence with q=1/3.</td></tr><tr><td colspan="2"><h3>Constraints</h3></td></tr><tr><td align="center" valign="top">-</td><td><b>N</b> will be between 1 and 50, inclusive.</td></tr><tr><td align="center" valign="top">-</td><td><b>d</b> will contain exactly N elements.</td></tr><tr><td align="center" valign="top">-</td><td>Each element of <b>d</b> will be between 0 and 100, inclusive.</td></tr><tr><td colspan="2"><h3>Examples</h3></td></tr><tr><td align="center" nowrap="true">0)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{0,1,2}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 6</pre></td></tr><tr><td><table><tr><td colspan="2">One possibility is that a[0]=3, a[1]=6, and a[2]=12. In this case, all contiguous subsequences of this sequence are geometric.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">1)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{1,2,4}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 5</pre></td></tr><tr><td><table><tr><td colspan="2">All one-element and two-element subsequences are geometric. The entire sequence cannot be geometric.</td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">2)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{3,2,1,0}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 10</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">3)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{1,2,4,8,16}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 9</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr><tr><td align="center" nowrap="true">4)</td><td></td></tr><tr><td>&#160;&#160;&#160;&#160;</td><td><table><tr><td><table><tr><td><pre>{1,3,5,5,5,5,64,4,23,2,3,4,5,4,3}</pre></td></tr></table></td></tr><tr><td><pre>Returns: 37</pre></td></tr><tr><td><table><tr><td colspan="2"></td></tr></table></td></tr></table></td></tr></table><p>This problem statement is the exclusive and proprietary property of TopCoder, Inc.  Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited.  (c)2003, TopCoder, Inc.  All rights reserved.  </p></body></html>
