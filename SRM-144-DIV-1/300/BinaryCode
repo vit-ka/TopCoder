@@ -1,3 +1,4 @@
+
 // {{{ VimCoder 0.3.6 <-----------------------------------------------------
 // vim:filetype=cpp:foldmethod=marker:foldmarker={{{,}}}
 
@@ -66,3 +67,4 @@ private:
     return curEncodedSymbol - prevDecodedSymbol - prevPrevDecodedSymbol;
   }
 };
+
