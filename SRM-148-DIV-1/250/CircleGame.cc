@@ -51,8 +51,7 @@ private:
   };
 
 public:
-	int cardsLeft(string deck)
-	{
+  int cardsLeft(string deck) {
     auto new_end = remove_if(deck.begin(), deck.end(), [=](char ch){return ch == 'K';});
     deck.erase(new_end, deck.end());
 
@@ -95,7 +94,7 @@ public:
       }
       indexesToRemove.clear();
     }
-		return deck.size();
-	}
+    return deck.size();
+  }
 };
 
